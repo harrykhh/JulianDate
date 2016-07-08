@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<gadget>
+  <name>Julian Date</name>
+  <version>1.0.0.0</version>
+  <author name="Harry Ho">
+    <info url="http://github.com/harrykhh" />
+  </author>
+  <copyright>Harry Ho</copyright>
+  <description>Julian Date Sidebar gadget.</description>
+  <icons>
+    <icon height="48" width="48" src="icon.png"/>
+  </icons>
+  <hosts>
+    <host name="sidebar">
+      <base type="HTML" apiVersion="1.0.0" src="Julian.html" />
+      <permissions>Full</permissions>
+      <platform minPlatformVersion="1.0" />
+      <defaultImage src="drag.png"/>
+    </host>
+  </hosts>
+</gadget>

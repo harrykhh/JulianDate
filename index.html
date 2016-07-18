@@ -1,6 +1,6 @@
 ﻿<html xmlns="http://www.w3.org/1999/xhtml">
     <head>
-        <meta http-equiv="refresh" content="3" />
+        <meta http-equiv="refresh" content="3600" />
         <title>Julian Date</title>
         <style type="text/css">
         body
@@ -43,8 +43,9 @@
 	
     <body onload="init()">
         <g:background>
+        <form><input Type="Button" value="Refresh" onClick="window.location.reload()"></form>
             <span id="gadgetContent">
-		Today : <span id="today"></span> <span><form><input Type="Button" value="Refresh" onClick="window.location.reload()"></form></span></p>
+		Today : <span id="today"></span> </p>
 		Julian Date: <span id="date"></span>
             </span>
         </g:background>

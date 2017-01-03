@@ -23,21 +23,26 @@
         }
         </style>
         <script type="text/jscript" language="jscript">
-            // Initialize the gadget.
-            function init()
-            {
-		var d = new Date();
-		document.getElementById("today").innerHTML = (d.getMonth() + 1) + '/' + d.getDate() + '/' +  d.getFullYear();
-		var n = d.getFullYear();
-		var j = n.toString().substring(3);
-		var start = new Date(d.getFullYear(), 0, 0);
-		var diff = d - start;
-		var oneDay = 1000 * 60 * 60 * 24;
-		var day = Math.floor(diff / oneDay);
-		j+= day;
-		var x = document.getElementById("date");
-		x.innerHTML = j;
-            }
+            function pad (str, max)     
+	    {  
+	    str = str.toString();
+	    return str.length < max ? pad("0" + str, max) : str;      
+	    }
+	    // Initialize the gadget.
+	    function init()
+	    { 
+	    var d = new Date();
+	    document.getElementById("today").innerHTML = (d.getMonth() + 1) + '/' + d.getDate() + '/' +  d.getFullYear();
+	    var n = d.getFullYear();
+	    var j = n.toString().substring(3);
+	    var start = new Date(d.getFullYear(), 0, 0);
+	    var diff = d - start;  var oneDay = 1000 * 60 * 60 * 24;
+	    var day = Math.floor(diff / oneDay);
+	    day = pad(day.toString(), 3);
+	    j+= day;
+	    var x = document.getElementById("date");
+	    x.innerHTML = j;
+	    }
         </script>
     </head>
 	
